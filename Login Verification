@@ -1,0 +1,24 @@
+//Checking if the login details are valid .......
+
+import java.util.Scanner;
+public class Login{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the username ");
+		String username=sc.nextLine();
+		System.out.print("Enter the password ");
+		String password=sc.nextLine();
+		System.out.println();
+		System.out.println();
+		if(username.equals("abcd")){
+			if(password.equals("1234"))
+				System.out.println("Login Successful...");
+			else
+				System.out.println("Invalid Password..... Try re-entering details....");
+		}
+		else
+			System.out.println("Invalid Username...... Recheck and enter again");
+		sc.close();
+
+	}
+}
