@@ -1,0 +1,39 @@
+// Program to check if the user has entered correct pin and amount for withdrawl..
+
+import java.util.Scanner;
+public class ATM{
+	public static void main(String args[]){
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Enter the pin number ");
+		int pin=sc.nextInt();
+
+		double balance=5000;
+		
+		
+		System.out.println();
+
+		if(pin==1234)
+		{
+			System.out.println("Enter the amount to withdraw : ");
+			int amnt=sc.nextInt();
+			if(amnt<=balance)
+			{
+				balance=balance-amnt;
+				System.out.println("\n...........Processing............\n");
+				System.out.println("Withdraw Successful.....");
+				System.out.println("The balance after withdrawl is $"+balance);
+			}
+			else
+			{
+				System.out.println("\n.....Insufficient Balance.....\n");	
+				System.out.println("Balance is only $"+balance);
+			}
+
+		}
+		else
+			System.out.println("Invalid PIN..... Recheck and enter again");
+		sc.close();
+
+	}
+}
